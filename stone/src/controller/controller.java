@@ -76,8 +76,6 @@ public class controller implements ActionListener, GameListener {
 
     @Override
     public void actionPerformed(ActionEvent e){
-        firstPlayer = null;
-        secondPlayer = null;
 
         if(!startedGame){
             if(e.getSource() == gameView.getExit()){

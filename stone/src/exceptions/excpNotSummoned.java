@@ -1,6 +1,5 @@
 package exceptions;
 
-@SuppressWarnings("serial")
 public class excpNotSummoned extends excpGame {
 
     public excpNotSummoned() {

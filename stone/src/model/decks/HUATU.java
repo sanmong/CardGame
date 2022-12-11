@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import exceptions.*;
+import model.cards.Concept;
 import model.cards.monster.Monster;
 
 public class HUATU extends Player {
@@ -14,8 +15,10 @@ public class HUATU extends Player {
 
     @Override
     public void buildDeck() throws IOException, CloneNotSupportedException{
-        ArrayList<Monster> pokers = getMonsters(getAllMonsters("huatu_monsters.csv"), 48);
+        ArrayList<Monster> pokers = getMonsters(getAllMonsters("huatu.csv"), 45);
         getDeck().addAll(pokers);
+        Monster Boom = (new Monster("Boom", 1, Concept.Neutral, 3,3,false,false,true));
+        getDeck().add(Boom);
         listenerToMonsters();
         Collections.shuffle(getDeck());
     }

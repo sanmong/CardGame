@@ -1,6 +1,5 @@
 package exceptions;
 
-@SuppressWarnings("serial")
 public class excpNotEnoughCost extends excpGame {
     public excpNotEnoughCost()
     {

@@ -1,6 +1,5 @@
 package exceptions;
 
-@SuppressWarnings("serial")
 public class excpCannotAttack extends excpGame {
 
     public excpCannotAttack() {

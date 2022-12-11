@@ -2,7 +2,6 @@ package exceptions;
 
 import model.cards.Card;
 
-@SuppressWarnings("serial")
 public class excpFullHand extends excpGame {
     private Card burned;
     public excpFullHand(Card burn) {
