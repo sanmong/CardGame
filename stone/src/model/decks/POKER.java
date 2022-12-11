@@ -15,12 +15,15 @@ public class POKER extends Player {
 
     @Override
     public void buildDeck() throws IOException, CloneNotSupportedException{
-        ArrayList<Monster> pokers = getMonsters(getAllMonsters("poker.csv"),50);
-        getDeck().addAll(pokers);
+        ArrayList<Monster> pokers = getMonsters(getAllMonsters("sample.csv"),10);
+        try{getDeck().addAll(pokers);
         Monster Boom = (new Monster("Boom", 1, Concept.Neutral, 3,3,false,false,true));
         getDeck().add(Boom);
         listenerToMonsters();
         Collections.shuffle(getDeck());
+        }catch(NullPointerException e){
+            System.out.println("Null pointer exception");
+        }
     }
 }
 
