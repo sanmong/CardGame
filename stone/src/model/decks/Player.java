@@ -36,8 +36,10 @@ public abstract class Player implements MonsterListener {
 
     public static final ArrayList<Monster> getAllMonsters(String filePath) throws IOException{
         BufferedReader br = new BufferedReader(new FileReader(filePath));
+
         ArrayList<Monster> monsters = new ArrayList<Monster>();
         String current = br.readLine();
+        //String current = "CloverKing,0,Neutral,0,0,FALSE,FALSE,FALSE";
         while (current != null) {
             String[] line = current.split(",");
             Monster monster = null;
@@ -53,6 +55,7 @@ public abstract class Player implements MonsterListener {
                     break;
                 case "Neutral":
                     aConcept = Concept.Neutral;
+                    break;
             }
             int aAtk = Integer.parseInt(line[3]);
             int aHP = Integer.parseInt(line[4]);
