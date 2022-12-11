@@ -112,6 +112,8 @@ public class controller implements ActionListener, GameListener {
                     }catch (excpFullHand e1){
                         JFrame j = new JFrame();
                         JOptionPane.showMessageDialog(j, "Full Hand");
+                    }catch(NullPointerException e2){
+                        System.out.println("Null pointer exception");
                     }
                     chooseDeckPage = false;
                     this.render();
@@ -147,6 +149,8 @@ public class controller implements ActionListener, GameListener {
         }catch (excpFullField e){
             JFrame j = new JFrame();
             JOptionPane.showMessageDialog(j,"Full Field");
+        }catch(NullPointerException e){
+            System.out.println("Null pointer exception");
         }
         this.attacker = null;
         this.render();
@@ -169,6 +173,8 @@ public class controller implements ActionListener, GameListener {
         }catch (excpTauntPass e) {
             JFrame j = new JFrame() ;
             JOptionPane.showMessageDialog(j, "Only Attack Taunt Monster");
+        }catch(NullPointerException e){
+            System.out.println("Null pointer exception");
         }
         this.fieldMonsterAttacker = null;
         this.render();

@@ -62,15 +62,8 @@ public abstract class Player implements MonsterListener {
             boolean aTaunt = line[5].equals("TRUE") ? true : false;
             boolean aDivine = line[6].equals("TRUE") ? true : false;
             boolean aCharge = line[7].equals("TRUE") ? true : false;
+            monster = new Monster(aName, aCost, aConcept, aAtk, aHP, aTaunt, aDivine,aCharge);
 
-            if (!aName.equals("CloverKing"))
-            {
-                monster = new Monster(aName, aCost, aConcept, aAtk, aHP, aTaunt, aDivine,aCharge);
-            }
-            else
-            {
-                monster = new CloverKing();
-            }
             monsters.add(monster);
             current = br.readLine();
         }
