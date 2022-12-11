@@ -27,6 +27,7 @@ public abstract class Player implements MonsterListener {
     public Player(String name) throws IOException, CloneNotSupportedException {
         this.name = name;
         curHP = 40;
+        deck = new ArrayList<>();
         field = new ArrayList<Monster>(7);
         hand = new ArrayList<Card>(10);
         buildDeck();
@@ -109,10 +110,10 @@ public abstract class Player implements MonsterListener {
         field.add(aMonster);
     }
 
-    public void attackWithMonster(Monster attacker, Monster target) throws excpCannotAttack, excpNotYourTurn, excpInvalidTarget, excpTauntPass, excpNotSummoned{
+    public void attackWithMonster(Monster aAtk, Monster aTarget) throws excpCannotAttack, excpNotYourTurn, excpInvalidTarget, excpTauntPass, excpNotSummoned{
         validator.validateTurn(this);
-        validator.validateAttack(attacker, target);
-        attacker.goAttack(target);
+        validator.validateAttack(aAtk, aTarget);
+        aAtk.goAttack(aTarget);
     }
 
     public void attackWithMonster(Monster attacker, Player target) throws excpCannotAttack, excpNotYourTurn, excpInvalidTarget, excpTauntPass, excpNotSummoned{
@@ -194,7 +195,7 @@ public abstract class Player implements MonsterListener {
         return deck;
     }
 
-    public boolean fieldContain(String aName){
+    public boolean fieldContains(String aName){
         for (Monster aMonster : field){
             if (aMonster.getName().equals(aName))
                 return true;

@@ -19,8 +19,8 @@ public class OpponentFieldListener implements ActionListener {
         CardView aAtk = (CardView) e.getSource();
         if (controller.getAttacker() != null) {
             CardView aCard = (CardView) controller.getAttacker();
-            JFrame j = new JFrame();
-            JOptionPane.showMessageDialog(j, "Invalid Target");
+            //JFrame j = new JFrame();
+            //JOptionPane.showMessageDialog(j, "Invalid Target");
         } else if (controller.getFieldMonsterAttacker() != null) {
             CardView aCard = (CardView) controller.getFieldMonsterAttacker();
             controller.attackMonster((Monster) aCard.getACard(), (Monster) aAtk.getACard());

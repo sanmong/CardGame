@@ -20,8 +20,8 @@ public class CurPlayerFieldListener implements ActionListener {
 
         if(controller.getAttacker() != null){
             CardView aCard = (CardView) controller.getAttacker();
-            JFrame j = new JFrame();
-            JOptionPane.showMessageDialog(j, "Invalid Target");
+            //JFrame j = new JFrame();
+            //JOptionPane.showMessageDialog(j, "Invalid Target");
         }
     }
 }

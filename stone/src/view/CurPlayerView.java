@@ -12,8 +12,8 @@ public class CurPlayerView extends JButton {
         this.aPlayer = aPlayer;
 
         this.setPreferredSize(new Dimension(108, 127));
-        this.setFont(new Font("Arial", Font.BOLD, 11));
-        this.setBorder(BorderFactory.createLineBorder(Color.red));
+        this.setFont(new Font("Arial", Font.BOLD, 12));
+        this.setBorder(BorderFactory.createLineBorder(Color.green));
         this.setText(this.toString());
     }
 

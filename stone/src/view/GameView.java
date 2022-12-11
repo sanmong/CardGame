@@ -30,7 +30,7 @@ public class GameView extends JFrame {
     public GameView(){
         super();
 
-        this.setSize(1280, 720);
+        this.setSize(1280, 1024);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
@@ -40,7 +40,7 @@ public class GameView extends JFrame {
 
         this.setLayout(new BorderLayout());
 
-        JLabel lblTop = new JLabel("듀얼을 시작한다!");
+        JLabel lblTop = new JLabel("START:DUEL!");
         JPanel pnlTop = new JPanel();
         pnlTop.add(lblTop, BorderLayout.CENTER);
 

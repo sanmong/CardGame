@@ -15,7 +15,7 @@ public class CardView extends JButton {
     public CardView (Card aCard){
         this.aCard = aCard;
         this.setPreferredSize(new Dimension(108, 128));
-        this.setFont(new Font("Arial", Font.BOLD, 14));
+        this.setFont(new Font("Arial", Font.BOLD, 12));
         this.setBorder(BorderFactory.createLineBorder(Color.blue));
         this.setText(this.toString());
     }

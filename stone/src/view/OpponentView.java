@@ -19,7 +19,7 @@ public class OpponentView extends JButton{
 
         this.aPlayer = aPlayer ;
         this.setPreferredSize(new Dimension(108,128));
-        this.setFont(new Font("Arial", Font.BOLD, 14));
+        this.setFont(new Font("Arial", Font.BOLD, 12));
         this.setBorder(BorderFactory.createLineBorder(Color.red ));
         this.setText(this.toString());
     }

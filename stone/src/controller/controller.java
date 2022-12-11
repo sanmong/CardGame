@@ -158,18 +158,18 @@ public class controller implements ActionListener, GameListener {
     public void attackMonster(Monster aCard, Monster aAtk){
         try {
             model.getCurPlayer().attackWithMonster(aCard, aAtk);
+        }catch (excpCannotAttack e){
+            JFrame j = new JFrame() ;
+            JOptionPane.showMessageDialog(j, "Can not Attack!");
+        }catch (excpNotYourTurn e){
+            JFrame j = new JFrame() ;
+            JOptionPane.showMessageDialog(j, "Not Your Turn");
         }catch (excpInvalidTarget e) {
             JFrame j = new JFrame() ;
             JOptionPane.showMessageDialog(j, "Invalid Target");
         }catch (excpNotSummoned e){
             JFrame j = new JFrame() ;
             JOptionPane.showMessageDialog(j, "This Card Is In Hand");
-        }catch (excpCannotAttack e){
-            JFrame j = new JFrame() ;
-            JOptionPane.showMessageDialog(j, "Can not Attack");
-        }catch (excpNotYourTurn e){
-            JFrame j = new JFrame() ;
-            JOptionPane.showMessageDialog(j, "Not Your Turn");
         }catch (excpTauntPass e) {
             JFrame j = new JFrame() ;
             JOptionPane.showMessageDialog(j, "Only Attack Taunt Monster");
@@ -191,7 +191,7 @@ public class controller implements ActionListener, GameListener {
             JOptionPane.showMessageDialog(j, "This Card Is In Hand");
         }catch (excpCannotAttack e){
             JFrame j = new JFrame() ;
-            JOptionPane.showMessageDialog(j, "Can not Attack");
+            JOptionPane.showMessageDialog(j, "Can not Attack!!");
         }catch (excpNotYourTurn e){
             JFrame j = new JFrame() ;
             JOptionPane.showMessageDialog(j, "Not Your Turn");
